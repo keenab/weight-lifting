@@ -1,11 +1,13 @@
 mat-sidenav-container, mat-sidenav-content, mat-sidenav {
   height: 100%;
+  
 }
 
 mat-sidenav {
   width: 15rem;
-  color: blue;
+  color: green;
 }
+
 a {
   text-decoration: none;
   color: white;
@@ -42,6 +44,7 @@ a:active {
 #input-icon {
     margin-right: 0.8rem;
     margin-top: 0.1rem;
+    
 }
 #home-icon,
 #dash-icon,
@@ -59,3 +62,4 @@ a:active {
 #history-label {
   margin-right: 1rem;
 }
+

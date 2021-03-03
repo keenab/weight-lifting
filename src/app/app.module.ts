@@ -35,6 +35,7 @@ import { StudentListComponent } from './student-list/student-list.component';
 import { StudentWorkoutHistoryComponent } from './student-workout-history/student-workout-history.component';
 import { EditRecommendedExerciseComponent } from './edit-recommended-exercise/edit-recommended-exercise.component';
 import { AdminGuard } from './shared/guards/admin.guard';
+import { PastWorkoutsComponent } from './past-workouts/past-workouts.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { AdminGuard } from './shared/guards/admin.guard';
     EditRecommendedExerciseComponent,
     StudentListComponent,
     StudentWorkoutHistoryComponent,
-    EditRecommendedExerciseComponent
+    EditRecommendedExerciseComponent,
+    PastWorkoutsComponent
   ],
   imports: [
     BrowserModule,

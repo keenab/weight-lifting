@@ -63,9 +63,10 @@ export class RecommendedExerciseService {
     return this.recExerciseNames;
   }
 
-  addExerciseDatabase(recommendedExercise: Array<RecommendedExercise>) {
+  // changed recommendedExercise to recommendedExercise2 bc of lint
+  addExerciseDatabase(recommendedExercises: Array<RecommendedExercise>) {
     // console.log('recExercises:' + recommendedExercise);
-    recommendedExercise.forEach(recommendedExercise => {
+    recommendedExercises.forEach(recommendedExercise => {
       if (recommendedExercise.coachComment === '') {
         recommendedExercise.coachComment = '';
       }

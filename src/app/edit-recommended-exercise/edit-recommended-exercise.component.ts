@@ -19,6 +19,7 @@ export class EditRecommendedExerciseComponent implements OnInit {
     private recommendedExerciseService: RecommendedExerciseService
   ) {}
 
+  // when the coach goes to edit the exercise, if it has a previous value, it will be assigned, if not it will be empty
   recommendedExercise = {
     name: this.data ? this.data.name : '',
     sets: this.data ? this.data.sets : '',

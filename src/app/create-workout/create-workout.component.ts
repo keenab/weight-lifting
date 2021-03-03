@@ -19,6 +19,7 @@ import { RecommendedExercise } from '../shared/models/recommended-exercise.model
 import { WorkoutService } from '../services/workout.service';
 import { EditRecommendedExerciseComponent } from '../edit-recommended-exercise/edit-recommended-exercise.component';
 
+// object exercisedata which takes in names, sets, reps, etc.
 export interface ExerciseData {
   name: string;
   sets: string;
@@ -28,11 +29,13 @@ export interface ExerciseData {
   coachComment: string;
 }
 
+// tells this page where to get its html and scss from
 @Component({
   selector: 'wla-create-workout',
   templateUrl: './create-workout.component.html',
   styleUrls: ['./create-workout.component.scss']
 })
+
 export class CreateWorkoutComponent implements OnInit {
   recExercises$: Observable<Array<RecommendedExercise>>;
   date: Date;
@@ -82,6 +85,7 @@ export class CreateWorkoutComponent implements OnInit {
     );
   }
 
+  // method for saving workout
   saveWorkout() {
     this.workoutService.saveWorkout(
       this.recExerciseService.recommendedExercises$.value,
@@ -93,6 +97,7 @@ export class CreateWorkoutComponent implements OnInit {
     // this.router.navigate(['']);
   }
 
+ // method for recommending workout?
   addRecExercise() {
     this.recExerciseService.addExerciseDatabase(this.recExerciseService.recommendedExercises$.value);
   }

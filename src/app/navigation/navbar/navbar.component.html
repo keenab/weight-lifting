@@ -1,16 +1,20 @@
+<!-- this is the blue bar-->
 <mat-toolbar color="primary">
-  <div fxHide.gt-xs>
+  <div fxHide.gt-xs> <!-- what does this do, shifts the get big -->
     <button mat-icon-button (click)="toggleSidenav.emit()">
       <mat-icon>menu</mat-icon>
     </button>
   </div>
+  
   <div>
     <a routerLink="/">
       Get Big
     </a>
   </div>
+
+
   <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
-    <ul fxLayout fxLayoutGap="20px" class="navigation-items">
+    <ul fxLayout fxLayoutGap="50px" class="navigation-items">
       <ng-container *ngIf="auth.user$ | async as user; else guest">
         <li>
           <a>
@@ -23,8 +27,8 @@
             </ng-template>
             <ng-template #studenthome>
               <a routerLink="/student-home" id="home">
-                <mat-icon id="home-icon" class="icon">home</mat-icon>
-                <span class="label">Home</span>
+                <mat-icon id="home-icon" class="icon" style = "position: relative; right: -90px;">home </mat-icon>
+                <span style = "position: relative; right: -90px;" class="label" >Home</span>
               </a>
             </ng-template>
           </a>
