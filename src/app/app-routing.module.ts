@@ -11,6 +11,8 @@ import { StudentEntireWorkoutComponent } from './student-entire-workout/student-
 import { StudentListComponent } from './student-list/student-list.component';
 import { StudentWorkoutHistoryComponent } from './student-workout-history/student-workout-history.component';
 import { AdminGuard } from './shared/guards/admin.guard';
+import { PastWorkoutsComponent } from './past-workouts/past-workouts.component';
+
 
 const routes: Routes = [
   // {
@@ -30,6 +32,12 @@ const routes: Routes = [
     path: 'today-workout-admin',
     component: CreateWorkoutComponent,
     canActivate: [LoginGuard, AdminGuard]
+  },
+
+  { 
+    path: 'past-workouts',
+    component: PastWorkoutsComponent,
+    canActivate: [AdminGuard]
   },
   {
     path: 'admin-home',

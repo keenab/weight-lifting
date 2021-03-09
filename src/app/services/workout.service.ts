@@ -40,6 +40,22 @@ export class WorkoutService {
     return result;
   }
 
+  async getPastWorkouts(group: Group): Promise<Workout[]> {
+    const todayDate = Utils.getSimplifiedDate(new Date());
+    const query = this.workoutsRef.ref
+      .where('group.id', '==', group.id)
+    const result = [];
+    let snapshot = await query.get();
+      if (snapshot.empty) {
+        return;
+      }
+
+      snapshot.forEach(doc => {
+        result.push(doc.data() as Workout);
+      });
+    return result;
+  }
+
   saveWorkout(
     recExercise: Array<RecommendedExercise>,
     dueDate: Date,

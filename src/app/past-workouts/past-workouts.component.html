@@ -1,1 +1,18 @@
-<p>past-workouts works!</p>
+<!-- *ngFor="let item of items"-->
+<div class="container">
+    <p *ngFor="let workout of pastWorkouts">
+        <!-- {{workout | json}} --> 
+        {{ workout.rep}}
+        <!-- show different fields like workout.name, workout.sets, etc.-->
+    </p>
+    <!-- make button to save the workouts-->
+    <button
+    type="button"
+    name="button"
+    id="save-past-workout-btn"
+    mat-raised-button
+    color="primary"
+    >
+    Save Past Workouts 
+  </button>
+</div>
