@@ -64,6 +64,7 @@ export class WorkoutService {
     const id = this.afs.createId();
     const todayDate = Utils.getSimplifiedDate(new Date());
     const workout = new WorkoutClass(
+      name,
       id,
       recExercise,
       dueDate,
@@ -75,6 +76,7 @@ export class WorkoutService {
     });
     const groupJSON = Object.assign({}, group);
     const newWorkout: Workout = {
+      name: workout.name,
       id: workout.id,
       recExercise: exercises,
       date: workout.date,

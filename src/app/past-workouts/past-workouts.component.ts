@@ -33,7 +33,7 @@ this.fetchExercises();
 
 //TODO need new methods to fetch past exercises....
 async fetchExercises() {
-  const waterpolo = new GroupClass("Waterpolo", "QGVVfkGVL4fjyZI5lBfS");
+   const waterpolo = new GroupClass("Waterpolo", "QGVVfkGVL4fjyZI5lBfS");
    this.pastWorkouts = await this.workoutservice.getPastWorkouts(waterpolo);
    console.log(this.pastWorkouts);
 }

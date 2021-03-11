@@ -99,7 +99,7 @@ export default class TestUtils {
     dateCreated = new Date('3000-01-01'),
     group = this.getTestGroup()
   ): Workout {
-    return new WorkoutClass(id, recExercise, date, dateCreated, group);
+    return new WorkoutClass(name, id, recExercise, date, dateCreated, group);
   }
 
   static getElement(fixture: ComponentFixture<ComponentRef<any>>): HTMLElement {

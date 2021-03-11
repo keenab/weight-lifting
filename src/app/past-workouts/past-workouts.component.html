@@ -1,10 +1,18 @@
 <!-- *ngFor="let item of items"-->
 <div class="container">
-    <p *ngFor="let workout of pastWorkouts">
-        <!-- {{workout | json}} --> 
-        {{ workout.rep}}
-        <!-- show different fields like workout.name, workout.sets, etc.-->
-    </p>
+  <div *ngFor="let workout of pastWorkouts" style="background-color: blue">
+    <p style="color: white" >
+      <!-- {{workout.recExercise[0] | json}} -->
+      {{workout.recExercise[0].name}},
+      {{workout.recExercise[0].reps}},
+      {{workout.recExercise[0].sets}},
+      {{workout.recExercise[0].weight}},
+      {{workout.recExercise[0].rest}},
+
+      {{workout.recExercise[0].coachComment}}
+      <!-- show different fields like workout.name, workout.sets, etc.-->
+  </p>
+  </div>
     <!-- make button to save the workouts-->
     <button
     type="button"
