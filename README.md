@@ -121,8 +121,10 @@ Methods:
 ```ts
 // Adds a new exercise to the local database
   addExercise()
+  
 // Submits the edited exercises and new exercise, and closes the dialog
   submitForm() 
+  
 // Updates the previous excercises to the new excercises
   updateExercise()
 ```
@@ -133,6 +135,7 @@ Methods:
 ```ts
 // Fetches past workouts from the database 
   fetchExercises()
+  
 // Copies past workouts that has id i   
   copyWorkout()
 ``` 
