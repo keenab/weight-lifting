@@ -163,4 +163,58 @@ Methods:
   private createStudentUser(user)
 ```
 
+### Current Date Selected 
 
+Methods: 
+```ts
+// assigns a date to the created workout 
+  setCurrentDate(date: Date)
+
+// gets the date 
+  getCurrentDate(): Date
+
+```
+
+### Current Group Selected
+
+Methods: 
+```ts
+// assigns a group to the created workout 
+  setCurrentGroup(group: Group) 
+
+// gets the date 
+getCurrentGroup(): Group 
+
+```
+
+### Exercise 
+
+Methods: 
+```ts 
+// Fetch exercises that were recently added using getValueChanged()
+  getAddedExercises(): Observable<Exercise[]>
+  
+// Get timestep of when the most recent exercise was added
+  getAddedExercisesTimestamp(): Observable<Exercise[]>
+  
+// Get exercises with name: name
+  getExercises(name: string): Observable<Exercise[]>  
+  
+// Fetch all of the exercises
+  getAllExercises(): Observable<Exercise[]>
+  
+//  Displays all student's exercises
+  getAllExercisesEver(): Observable<Exercise[]>  
+  
+// Displays a student's exercises 
+  getExercise(name: string): Observable<Exercise[]> 
+  
+// Adds new exercises
+  addExercise(exercise: any, setNumber: number)
+  
+// Workouts can be updated and edited
+  updateExercise(exercise: Exercise) 
+  
+// Deletes workouts 
+  deleteExercise(exercise: Exercise)
+  
