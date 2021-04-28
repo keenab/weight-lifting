@@ -217,4 +217,100 @@ Methods:
   
 // Deletes workouts 
   deleteExercise(exercise: Exercise)
-  
+ ```
+ ### Groups 
+
+Methods: 
+```ts 
+
+// Gets the added groups 
+getAddedGroups(): Observable<Group[]> 
+
+// gets the added group on the dropdown menu
+getAddedGroupsDropdown(): Promise<Group[]>
+
+// Adds a group to the dropdown menu 
+addGroup(group: any)
+
+```
+### Recommended Exercise Service 
+
+Methods: 
+```ts 
+
+// displays the added workouts of the exercise
+getAddedExercises()
+
+// clears the exercise
+clearExerciseLocal()
+
+// Adds the exercise 
+addExerciseLocal(recommendedExercise: any)
+
+// this displayss the past exercises from the database 
+async getExercisesDatabase(): Promise<Array<string>>
+
+// adds the exercise to the database 
+ addExerciseDatabase(recommendedExercises: Array<RecommendedExercise>)
+
+// allows the coach to edit the recommended exercise 
+ updateRecommendedExercise(recommendedExercise: RecommendedExercise) 
+ 
+ // deletes the recommended exercise 
+ deleteRecommendedExercise(recommendedExercise: RecommendedExercise): void 
+ ```
+ 
+ ### Student
+ 
+ Methods: 
+ ```ts
+ // displays a list of students
+ getStudents(): Observable<User[]>
+ ```
+ 
+ ### User 
+ 
+ Methods:
+ ```ts 
+
+// checks to see if the user is an admin, if so it redirects them to the admin home page
+ async isAdmin(id: string): Promise<boolean>
+
+// gets the current user
+  async getCurrentUser(idToken: string): Promise<User> 
+ 
+ ```
+ 
+ ### Workout
+ 
+ Methods:
+ ``` ts
+ 
+ // gets today's workoout 
+ async getTodayWorkout(group: Group): Promise<Workout> 
+ 
+ // displays past  workouts 
+ async getPastWorkouts(group: Group): Promise<Workout[]>
+ 
+ // saves recommended exercises to a workout in create workout component
+ saveWorkout()
+ ```
+ 
+ ## Ideas for New Features
+ 
+ ### Continue designing PastWorkouts
+ 
+ Right now, admins are able to see the past recommended workouts, but future programmers should figure out how to get the date of the past workouts to display and how to allow coaches to click on the past workout they want to reassign to students.
+ 
+ ### Ionic Framework
+ 
+ A possible idea is to create this project in the ionic framework to make it more accessible and presentable on mobile.
+ 
+ ### Revamp the app
+ 
+ Similar to the idea above, at the moment, the website looks very generic. In the future, it would be a good idea to have someone with an eye for design re-design the site.
+ 
+ ### Test run
+ 
+ The app still needs to be tests with a group of students. 
+ 
